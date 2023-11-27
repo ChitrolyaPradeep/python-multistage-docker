@@ -13,6 +13,8 @@ FROM python:3.9-slim-buster
 
 WORKDIR /app
 
+RUN pip install flask
+
 COPY --from=backend-builder /app /app
 
 EXPOSE 5000
